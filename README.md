@@ -30,6 +30,7 @@ Tech Stack
 
 Clone the Project
 git clone https://github.com/isamiul797-sketch/minipost.git
+
 cd minipost
 
 Installation
@@ -72,6 +73,7 @@ Posts can be edited or deleted only by the author.
 Use the search bar in the navbar to search posts by text.
 
 Requirements
+
 asgiref==3.10.0
 Django==5.2.7
 django-widget-tweaks==1.5.0
