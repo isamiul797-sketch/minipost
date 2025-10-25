@@ -116,8 +116,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-LOGIN_URL = '/accounts/login'
+LOGIN_URL = '/posts/login'
 
+# Redirect after login / logout
+LOGIN_REDIRECT_URL = '/posts/'
+LOGOUT_REDIRECT_URL = '/posts/'
 
-LOGIN_REDIRECT_URL = '/registration/'
-LOGOUT_REDIRECT_URL = '/registration/'

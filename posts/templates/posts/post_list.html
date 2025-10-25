@@ -26,8 +26,10 @@
                     <p class="card-text">{{ posts.post }}</p>
                 </div>
                 <div class="card-footer bg-transparent d-flex justify-content-between">
+                    {% if posts.user == user %}
                     <a href="{% url 'post_edit' posts.id %}" class="btn btn-sm btn-outline-primary">Edit</a>
                     <a href="{% url 'post_delete' posts.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
