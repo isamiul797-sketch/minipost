@@ -61,5 +61,5 @@ def register(request):
     else:
         form = UserRegistrationForm()
 
-    return render(request,'posts/register.html',{'form':form})
+    return render(request,'registration/register.html',{'form':form})
 
