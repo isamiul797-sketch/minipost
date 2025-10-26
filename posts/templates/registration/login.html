@@ -1,12 +1,26 @@
 {% extends "posts/layout.html" %}
+{% load widget_tweaks %}
 
+{% block title %}Login{% endblock title %}
 {% block content %}
-<h2>Login Form</h2>
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button class="btn btn-primary">Register</button>
-</form>
-<p>Don't have an account?<a href="{% url 'register' %}">Register Here</a></p>
-{% endblock content %}
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="text-center mb-4">Login to Your Account</h2>
 
+  <form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      {% render_field form.username class="form-control" placeholder="Enter username" %}
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      {% render_field form.password class="form-control" placeholder="Enter password" %}
+    </div>
+    <button class="btn btn-success w-100" type="submit">Login</button>
+  </form>
+
+  <p class="text-center mt-3">
+    Don’t have an account? <a href="{% url 'register' %}">Register</a>
+  </p>
+</div>
+{% endblock content %}

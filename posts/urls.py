@@ -9,4 +9,6 @@ urlpatterns = [
     path('delete/<int:post_id>',views.post_delete, name='post_delete'),
     path('delete/<int:post_id>',views.post_delete, name='post_delete'),
     path('resgister/',views.register, name='register'),
+
+    path('search/', views.post_search, name='post_search'),
     ]
